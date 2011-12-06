@@ -32,8 +32,17 @@ public abstract class Agent {
 	public abstract void operate( HashMap<String, Values> marketVar );
 	
 	//adjust portfolio after buy
-	public void buy( Values cm, Double qty ){
-		
+	public void buy( String name, BigDecimal price, BigDecimal qty ){
+		Double moneyd = money.doubleValue();
+		if( moneyd <= 0 )
+			return;
+		BigDecimal sub = price.multiply(qty);
+		Double subd = sub.doubleValue();
+		if( (moneyd - subd) >= 0){
+			money = money.subtract(sub);
+		}else{
+			money = BigDecimal.ZERO;
+		}		
 	}
 
 	//adjust portfolio after buy
