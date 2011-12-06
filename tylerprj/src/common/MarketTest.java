@@ -55,3 +55,13 @@ public class MarketTest {
 		assertTrue( true );
 	}
 }
+
+/*
+ *	mac:
+ * /Users/Y874139/tyler 
+ * 		git pull
+ * 		git commit -m 'changed'
+ * 		git push
+ * 		git push -u origin master
+ * 
+*/
