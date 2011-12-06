@@ -60,7 +60,7 @@ public class MarketTest {
  *	mac:
  * /Users/Y874139/tyler 
  * 		git pull
- * 		git commit -m 'changed'
+ * 		git commit -a -m 'rm rm'
  * 		git push
  * 		git push -u origin master
  * 
