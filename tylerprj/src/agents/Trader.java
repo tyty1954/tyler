@@ -34,17 +34,16 @@ public class Trader extends Agent {
 		Values cc = commodity.get("GLD");
 		Double priceTarget = priceTargets.get("GLD").doubleValue();
 		Double price = cc.getCurrentPrice().doubleValue();
-		BigDecimal newPrice;
+		BigDecimal newPrice = cc.getCurrentPrice();
 		if( price > priceTarget){
 			newPrice = new BigDecimal(price - 0.5);
-			cc.setNewPrice( new BigDecimal(price - 0.5));
+			//cc.setNewPrice( new BigDecimal(price - 0.5));
 		}else if( price < priceTarget){
-			cc.setNewPrice( new BigDecimal(price + 1.0));
-		}else{
-			cc.setNewPrice( cc.getCurrentPrice());
+			newPrice = new BigDecimal(price + 1.0);
+			//cc.setNewPrice( new BigDecimal(price + 1.0));
 		}
-		//cc.setNewPrice( newPrice );
-		//System.out.print(newPrice + " ");
+		cc.setNewPrice( newPrice );
+		System.out.print(newPrice + " ");
 
 	}
 }

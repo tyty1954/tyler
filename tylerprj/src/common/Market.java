@@ -35,6 +35,7 @@ public class Market {
 			//for( Values priceHistory : priceHistories.values() ){
 			//	priceHistory.print();
 			//}
+			System.out.println(" ");
 		}
 		Values priceHistory = priceHistories.get("GLD");
 		priceHistory.print();
